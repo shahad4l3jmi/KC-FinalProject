@@ -17,7 +17,7 @@ struct SecondView: View {
             
             VStack(spacing:20){
                  // Custom Date
-                CustomDatePicker(currentDate: $currentDate)
+              //  CustomDatePicker2(currentDate: $currentDate)
             }
         }
     }

@@ -91,16 +91,18 @@ struct CustomDatePicker2: View {
     func extraDate()->[String]{
 //STOP POINT⚠️
         let fotmatter = DateFormatter()
-        Formatter.dateFormat = "YYYY MMMM"
-        
-        let date = formatter.string(From:currentDate)
+        fotmatter.dateFormat = "YYYY MMMM"
+        let date = fotmatter.string(from: currentDate)
         
         return date.components(separatedBy: "  ")
     }
     
     
     func getCurrenttMonth()->Date{
+        let calender = Calendar.current
+
         //getting current date month
+     
         guard let currentMonth = calender.date(byAdding: .month,value: self.currentMonth, to: Date()) else{
             return Date()
         }
@@ -113,16 +115,21 @@ struct CustomDatePicker2: View {
             let calender = Calendar.current
             
             //getting current date month
-             let currentMonth = getCurrenttMonth()
+              let currentMonth = getCurrenttMonth()
             
-            let Days = currentMonth.getAllDates().compactMap{date -> DateValue
-                in
+            var days = currentMonth.getAllDates().compactMap{date -> DateValue in
             //getting day...
                 let day = calender.component(.day, from: date)
                  
                 return DateValue(day: day, date: date)
                 
             }
+            let firstWeekday = calender.component(.weekday, from: days.first?.date ?? Date())
+            
+            for _ in 0..<firstWeekday - 1{
+                days.insert(DateValue(day: -1, date: Date()), at: 0)
+            }
+            return days
         }
     }
 
@@ -143,11 +150,11 @@ extension Date {
         //StartDate
         let startDate = calender.date(from: Calendar.current.dateComponents([.year,.month], from: self))!
         
-        var range = calender.range(of: .day, in: .month, for: startDate)!
-        range.removeLast()
+        let range = calender.range(of: .day, in: .month, for: startDate)!
+       
         //gettingdate
         return range.compactMap{ day -> Date in
-            return calender.date(byAdding: .day,value: day == 1 ? 0:day ,to:startDate )!
+            return calender.date(byAdding: .day,value: day - 1 ,to: startDate )!
         }
         
     }
