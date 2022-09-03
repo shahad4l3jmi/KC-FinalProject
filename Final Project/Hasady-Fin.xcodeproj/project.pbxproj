@@ -14,6 +14,7 @@
 		0F56DC2D28C158CD00006185 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F56DC2C28C158CD00006185 /* SecondView.swift */; };
 		0F56DC3128C2312C00006185 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F56DC3028C2312C00006185 /* DateValue.swift */; };
 		0F56DC3328C3649400006185 /* CustomDatePicker2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F56DC3228C3649400006185 /* CustomDatePicker2.swift */; };
+		0F56DC3528C3CF0E00006185 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F56DC3428C3CF0E00006185 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		0F56DC2C28C158CD00006185 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		0F56DC3028C2312C00006185 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
 		0F56DC3228C3649400006185 /* CustomDatePicker2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker2.swift; sourceTree = "<group>"; };
+		0F56DC3428C3CF0E00006185 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				0F23063728BCE198006CD594 /* ContentView.swift */,
 				0F56DC2C28C158CD00006185 /* SecondView.swift */,
 				0F56DC3228C3649400006185 /* CustomDatePicker2.swift */,
+				0F56DC3428C3CF0E00006185 /* Task.swift */,
 				0F56DC3028C2312C00006185 /* DateValue.swift */,
 				0F23063928BCE19A006CD594 /* Assets.xcassets */,
 				0F23063B28BCE19A006CD594 /* Preview Content */,
@@ -150,6 +153,7 @@
 				0F23063828BCE198006CD594 /* ContentView.swift in Sources */,
 				0F23063628BCE198006CD594 /* Hasady_FinApp.swift in Sources */,
 				0F56DC3128C2312C00006185 /* DateValue.swift in Sources */,
+				0F56DC3528C3CF0E00006185 /* Task.swift in Sources */,
 				0F56DC3328C3649400006185 /* CustomDatePicker2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

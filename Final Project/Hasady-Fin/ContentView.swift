@@ -32,13 +32,13 @@ struct ContentView: View {
                     
                     NavigationLink(destination: SecondView()){
                     Image(systemName: "calendar")
-                        .font(.system(size: 50))
+                        .font(.system(size: 45))
                         .foregroundColor(.white)
                         .padding()
                     }
                     Spacer()
                     Image(systemName: "stopwatch.fill")
-                        .font(.system(size: 50))
+                        .font(.system(size: 45))
                         .foregroundColor(.white)
                         .padding()
                    
