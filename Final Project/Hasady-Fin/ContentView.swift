@@ -14,37 +14,45 @@ struct ContentView: View {
     @State var hadaf3 = ""
     @State private var isDone = false
     var body: some View {
+        NavigationView{
+            
         ZStack{
             Image("BG")
                 .resizable()
                 .ignoresSafeArea()
-                .frame(width: 425, height: 950)
+                .frame(width: 425, height: 960)
+                
             VStack{
                 Text("حديقة الأحلام")
                     .font(.title)
                     .foregroundColor(.white)
                     .bold()
-                    .padding(.top,70)
+                    .padding(.top,20)
                 Spacer()
                 
-                    
+                
                 HStack {
                     
-                    NavigationLink(destination: SecondView()){
-                    Image(systemName: "calendar")
-                        .font(.system(size: 45))
-                        .foregroundColor(.white)
-                        .padding()
-                    }
-                    Spacer()
-                    Image(systemName: "stopwatch.fill")
-                        .font(.system(size: 45))
-                        .foregroundColor(.white)
-                        .padding()
                    
-                }.frame(width: 400, height: 00)
-                    .padding(.top,250)
+                        
+                       NavigationLink(destination: SecondView() ){ Image(systemName: "calendar")}
+                       .font(.system(size: 50))
+                       .foregroundColor(.white)
+                       .padding()
+                        
                 
+                    Spacer()
+                        
+                      NavigationLink(destination: Home()){ Image(systemName: "stopwatch.fill")}
+                        .font(.system(size: 50))
+                        .foregroundColor(.white)
+                        .padding()
+                    
+                }.frame(width: 400, height: 00)
+                        .padding(.top,260)
+                    
+                
+                    
                 Text("أهدافي")
                     .font(.title)
                     .foregroundColor(.gray)
@@ -75,6 +83,7 @@ struct ContentView: View {
             
         }
     }
+}
 }
 }
 struct ContentView_Previews: PreviewProvider {
