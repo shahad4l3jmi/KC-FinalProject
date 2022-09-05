@@ -5,17 +5,17 @@
 //  Created by Shhooda on 29/08/2022.
 //
 
-import SwiftUI
 
-@main
-struct Hasady_FinApp : App {
-    var body : some View {
-        
-       
-    }
-  }
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Hasady_FinApp()
-    }
-}
+        import SwiftUI
+
+        @main
+        struct Hasady_FinApp: App {
+            @StateObject var data = TimerData()
+            var body: some Scene {
+                WindowGroup {
+                    ContentView()
+                        .environmentObject(data)
+                }
+            }
+        }
+

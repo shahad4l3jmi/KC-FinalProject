@@ -69,7 +69,7 @@ struct Home: View {
                         data.timerViewOffset = 0
                         
                     }
-                    
+                    preformNotifications()
                 }, label: {
                     
                     
@@ -118,6 +118,7 @@ struct Home: View {
                //counting Timer
                 data.selecctedTime -= 1
                            
+                           
                            //height update
                            let ProgressHeight = UIScreen.main.bounds.height / CGFloat(data.time)
                            
@@ -126,16 +127,10 @@ struct Home: View {
                                data.timerHeightChange = CGFloat(diff) * ProgressHeight
                            }
                            
-                           if data.selecctedTime  == 0 { data.time - data.selecctedTime
+                           if data.selecctedTime  == 0 {
                            //reset
-                           withAnimation(.default){
-                               data.time = 0
-                               data.selecctedTime = 0
-                               data.timerHeightChange = 0
-                               data.timerViewOffset = UIScreen.main.bounds.height
-                               data.buttonAnimation = false
+                               data.resetView()
                 
-            }
                        
                        }
                        }
@@ -152,6 +147,23 @@ struct Home: View {
                 
                 
             } )
+    }
+    func preformNotifications(){
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Notification From Hasady🌱"
+        content.body = "Time Is Up! You Did A Great Job ,Get A Break!<3"
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(data.time), repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "TIMER", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request){
+            (err) in
+            if err != nil{
+                print(err!.localizedDescription)
+            }
+        }
     }
 }
 

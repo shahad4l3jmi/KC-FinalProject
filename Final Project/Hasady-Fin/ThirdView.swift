@@ -26,4 +26,23 @@ class TimerData: NSObject,UNUserNotificationCenterDelegate ,ObservableObject{
         completionHandler([.banner,.sound])
         
     }
+    
+    //ontap..
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive Response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping() ->Void) {
+        
+        //restes View
+        completionHandler()
+        
+}
+    
+    func resetView(){
+        withAnimation(.default){
+            time = 0
+            selecctedTime = 0
+            timerHeightChange = 0
+            timerViewOffset = UIScreen.main.bounds.height
+            buttonAnimation = false
+    }
+    
+    }
 }
