@@ -15,19 +15,40 @@ struct ContentView: View {
     @State private var isDone = false
     var body: some View {
         NavigationView{
+            Home()
             
         ZStack{
             Image("BG")
                 .resizable()
                 .ignoresSafeArea()
                 .frame(width: 425, height: 960)
+                .padding(.bottom,80)
+            Image("1")
+                .resizable()
+                .scaleEffect()
+                .frame(width: 100, height: 100)
+                .padding(.bottom,200)
+                .padding(.leading,100)
                 
+            Image("2")
+                .resizable()
+                .scaleEffect()
+                .frame(width: 100, height: 100)
+                .padding(.bottom,690)
+                .padding(.leading,250)
+            
+            Image("4")
+                .resizable()
+                .scaleEffect()
+                .frame(width: 100, height: 100)
+                .padding(.bottom,500)
+                .padding(.trailing,250)
             VStack{
                 Text("حديقة الأحلام")
                     .font(.title)
                     .foregroundColor(.white)
                     .bold()
-                    .padding(.top,20)
+                    .padding(.top,60)
                 Spacer()
                 
                 
@@ -38,7 +59,7 @@ struct ContentView: View {
                        NavigationLink(destination: SecondView() ){ Image(systemName: "calendar")}
                        .font(.system(size: 50))
                        .foregroundColor(.white)
-                       .padding()
+                       .padding(.bottom,190)
                         
                 
                     Spacer()
@@ -46,7 +67,7 @@ struct ContentView: View {
                       NavigationLink(destination: Home()){ Image(systemName: "stopwatch.fill")}
                         .font(.system(size: 50))
                         .foregroundColor(.white)
-                        .padding()
+                        .padding(.bottom,190)
                     
                 }.frame(width: 400, height: 00)
                         .padding(.top,260)
@@ -57,7 +78,7 @@ struct ContentView: View {
                     .font(.title)
                     .foregroundColor(.gray)
                     .bold()
-                    .padding(.top,100)
+                    .padding(.top,20)
                 
                 
                 ScrollView{

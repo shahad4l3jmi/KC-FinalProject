@@ -8,10 +8,14 @@
 import SwiftUI
 
 @main
-struct Hasady_FinApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+struct Hasady_FinApp : App {
+    var body : some View {
+        
+       
+    }
+  }
+struct Home_Previews: PreviewProvider {
+    static var previews: some View {
+        Hasady_FinApp()
     }
 }

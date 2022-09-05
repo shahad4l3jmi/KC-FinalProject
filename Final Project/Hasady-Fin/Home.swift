@@ -8,9 +8,12 @@
 import SwiftUI
 //THird View
 //min9
+
+//sending notification
+import UserNotifications
 struct Home: View {
     
-    @StateObject var data = TimerData()
+    @EnvironmentObject var data: TimerData
     
     var body: some View {
         ZStack {
@@ -49,6 +52,7 @@ struct Home: View {
                 })
                 //setting to center
                 .offset( y: 90)
+                .opacity(data.buttonAnimation ? 0 : 1)
                 
                 
                 
@@ -69,8 +73,10 @@ struct Home: View {
                 }, label: {
                     
                     
-                        Capsule()
-                        .fill(Color.pink.opacity(0.3))
+                        Image("button")
+                        .resizable()
+                        .scaledToFit()
+                        .opacity(0.7)
                         .shadow(color: .pink, radius: 5)
                         .frame(width: 100, height: 90)
                         
@@ -86,7 +92,7 @@ struct Home: View {
                 
             }
           
-            Color.yellow.opacity(0.5)
+            Color.yellow
             //decrease height
                 .frame(height: UIScreen.main.bounds.height - data.timerHeightChange)
                 .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
@@ -119,12 +125,33 @@ struct Home: View {
                            withAnimation(.default){
                                data.timerHeightChange = CGFloat(diff) * ProgressHeight
                            }
+                           
+                           if data.selecctedTime  == 0 { data.time - data.selecctedTime
+                           //reset
+                           withAnimation(.default){
+                               data.time = 0
+                               data.selecctedTime = 0
+                               data.timerHeightChange = 0
+                               data.timerViewOffset = UIScreen.main.bounds.height
+                               data.buttonAnimation = false
                 
             }
                        
-                       
-                       
+                       }
+                       }
             })
+            .onAppear(perform:{
+                //permission
+                UNUserNotificationCenter.current().requestAuthorization(options: [.badge,.sound,.alert]){ (_,_) in
+                    
+                    
+                }
+                
+                //in app not
+                UNUserNotificationCenter.current().delegate = data
+                
+                
+            } )
     }
 }
 
