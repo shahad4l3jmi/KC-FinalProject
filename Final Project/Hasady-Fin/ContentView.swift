@@ -15,7 +15,7 @@ struct ContentView: View {
     @State private var isDone = false
     var body: some View {
         NavigationView{
-            Home()
+          
             
         ZStack{
             Image("BG")

@@ -35,12 +35,12 @@ var tasks: [TaskMetaData] = [
     Task(title: "مراجعة بعض الدروس"),
     Task(title: "ممارسة الرياضة💪🏼"),
     Task(title: "أنام بدريي!!")
-    ], taskDate: getSampleDate (offset: 1)),
+    ], taskDate: getSampleDate (offset: 3)),
     TaskMetaData(task: [
         
     Task(title: "لازم آسلم ٬مشروع التخرج!🤩")
     ],
-    taskDate: getSampleDate(offset: 3)),
+    taskDate: getSampleDate(offset: 1)),
     
     TaskMetaData(task: [
         
@@ -59,7 +59,7 @@ var tasks: [TaskMetaData] = [
         TaskMetaData(task: [
             
             Task(title: "حفل التخرج!!🎓")
-            ], taskDate: getSampleDate (offset: 14)),
+            ], taskDate: getSampleDate (offset: 11)),
             
         
         

@@ -17,6 +17,13 @@ struct Home: View {
     
     var body: some View {
         ZStack {
+            
+            Image("Timer")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 300, height: 300)
+                .padding(.bottom,350)
+            
             VStack{
                 
                 Spacer()
@@ -51,7 +58,7 @@ struct Home: View {
                     
                 })
                 //setting to center
-                .offset( y: 90)
+                .offset( y: 130)
                 .opacity(data.buttonAnimation ? 0 : 1)
                 
                 

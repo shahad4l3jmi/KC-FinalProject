@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F23063228BCE198006CD594 /* Hasady-Fin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hasady-Fin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F23063228BCE198006CD594 /* Hasady🌱حصادي.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hasady🌱حصادي.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F23063528BCE198006CD594 /* Hasady_FinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hasady_FinApp.swift; sourceTree = "<group>"; };
 		0F23063728BCE198006CD594 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0F23063928BCE19A006CD594 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		0F23063328BCE198006CD594 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F23063228BCE198006CD594 /* Hasady-Fin.app */,
+				0F23063228BCE198006CD594 /* Hasady🌱حصادي.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,9 +90,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0F23063128BCE198006CD594 /* Hasady-Fin */ = {
+		0F23063128BCE198006CD594 /* Hasady🌱حصادي */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F23064028BCE19A006CD594 /* Build configuration list for PBXNativeTarget "Hasady-Fin" */;
+			buildConfigurationList = 0F23064028BCE19A006CD594 /* Build configuration list for PBXNativeTarget "Hasady🌱حصادي" */;
 			buildPhases = (
 				0F23062E28BCE198006CD594 /* Sources */,
 				0F23062F28BCE198006CD594 /* Frameworks */,
@@ -102,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = "Hasady-Fin";
+			name = "Hasady🌱حصادي";
 			productName = "Hasady-Fin";
-			productReference = 0F23063228BCE198006CD594 /* Hasady-Fin.app */;
+			productReference = 0F23063228BCE198006CD594 /* Hasady🌱حصادي.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -135,7 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F23063128BCE198006CD594 /* Hasady-Fin */,
+				0F23063128BCE198006CD594 /* Hasady🌱حصادي */,
 			);
 		};
 /* End PBXProject section */
@@ -355,7 +355,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F23064028BCE19A006CD594 /* Build configuration list for PBXNativeTarget "Hasady-Fin" */ = {
+		0F23064028BCE19A006CD594 /* Build configuration list for PBXNativeTarget "Hasady🌱حصادي" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F23064128BCE19A006CD594 /* Debug */,
